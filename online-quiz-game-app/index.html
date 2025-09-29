@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Quiz Game</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🎮 Online Quiz Game</h1>
+
+    <div id="start-screen" class="screen active">
+      <input type="text" id="playerName" placeholder="Enter your name" class="input-field">
+      <select id="category" class="input-field">
+        <option value="9">General Knowledge</option>
+        <option value="11">Movies</option>
+        <option value="12">Music</option>
+      </select>
+      <button class="btn" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" class="screen">
+      <div class="question-card">
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+      </div>
+      <button class="btn next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="result-screen" class="screen">
+      <h2 id="final-score"></h2>
+      <canvas id="chart" width="300" height="300"></canvas>
+      <h3>Leaderboard</h3>
+      <ul id="leaderboard" class="leaderboard"></ul>
+      <button class="btn" onclick="restartQuiz()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
